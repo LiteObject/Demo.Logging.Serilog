@@ -1,9 +1,11 @@
 using System;
 
-namespace Demo.Logging.Serilog.API
+namespace Demo.Weather.One.API
 {
     public class WeatherForecast
     {
+        public string CityName { get; set; }
+
         public DateTime Date { get; set; }
 
         public int TemperatureC { get; set; }

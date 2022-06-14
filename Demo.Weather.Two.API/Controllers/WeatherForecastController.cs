@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Demo.Logging.Serilog.API.Controllers
+namespace Demo.Weather.Two.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -21,14 +21,11 @@ namespace Demo.Logging.Serilog.API.Controllers
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
-            this._logger.LogInformation($"Instantiated {nameof(WeatherForecastController)} class.");
         }
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            this._logger.LogInformation("API received GET request.");
-
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

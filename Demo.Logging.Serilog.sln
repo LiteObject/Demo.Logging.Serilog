@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31205.134
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Logging.Serilog.API", "Demo.Logging.Serilog.API\Demo.Logging.Serilog.API.csproj", "{0AE14590-6E94-43F6-8420-7EECC07FAF9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Logging.Serilog.App", "Demo.Logging.Serilog.App\Demo.Logging.Serilog.App.csproj", "{F6053C44-0C37-4534-ABBE-3285D8D59B7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Logging.Serilog.App", "Demo.Logging.Serilog.App\Demo.Logging.Serilog.App.csproj", "{F6053C44-0C37-4534-ABBE-3285D8D59B7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Weather.One.API", "Demo.Weather.One.API\Demo.Weather.One.API.csproj", "{2CB1B162-DCDD-407F-AB3C-E774EF8A4898}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Weather.Two.API", "Demo.Weather.Two.API\Demo.Weather.Two.API.csproj", "{4C540871-2B11-4D60-9985-AD8841A48EF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0AE14590-6E94-43F6-8420-7EECC07FAF9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0AE14590-6E94-43F6-8420-7EECC07FAF9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0AE14590-6E94-43F6-8420-7EECC07FAF9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0AE14590-6E94-43F6-8420-7EECC07FAF9B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F6053C44-0C37-4534-ABBE-3285D8D59B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F6053C44-0C37-4534-ABBE-3285D8D59B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6053C44-0C37-4534-ABBE-3285D8D59B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6053C44-0C37-4534-ABBE-3285D8D59B7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CB1B162-DCDD-407F-AB3C-E774EF8A4898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CB1B162-DCDD-407F-AB3C-E774EF8A4898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CB1B162-DCDD-407F-AB3C-E774EF8A4898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CB1B162-DCDD-407F-AB3C-E774EF8A4898}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C540871-2B11-4D60-9985-AD8841A48EF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C540871-2B11-4D60-9985-AD8841A48EF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C540871-2B11-4D60-9985-AD8841A48EF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C540871-2B11-4D60-9985-AD8841A48EF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
