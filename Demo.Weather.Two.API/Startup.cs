@@ -18,12 +18,16 @@ namespace Demo.Weather.Two.API
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, ILogger<Program> logger)
         {
             Configuration = configuration;
+            Logger = logger ?? throw new ArgumentNullException(nameof(logger));
+
+            Logger.LogTrace($"Instantiating the {nameof(Startup)} class");
         }
 
         public IConfiguration Configuration { get; }
+        public ILogger<Program> Logger { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
