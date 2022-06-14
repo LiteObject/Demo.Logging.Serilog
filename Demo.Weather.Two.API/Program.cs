@@ -93,7 +93,7 @@ namespace Demo.Weather.Two.API
             .WriteTo.Console(outputTemplate: outputTemplate, theme: AnsiConsoleTheme.Code)
             .WriteTo.Debug(new JsonFormatter(renderMessage: true), LogEventLevel.Verbose)
             .WriteTo.LogzIoDurableHttp(
-                "https://listener.logz.io:8071?type=dev&token=IponWRfXqQYPbTQDZOqCQDZwCuaIQjlF",
+                "https://listener.logz.io:8071?type=dev&token=<TOKEN>",
                 logzioTextFormatterOptions: new LogzioTextFormatterOptions
                 {
                     BoostProperties = true,
