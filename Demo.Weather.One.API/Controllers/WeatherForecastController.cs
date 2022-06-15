@@ -70,7 +70,7 @@ namespace Demo.Weather.One.API.Controllers
 
             for (var i = 0; i < result.Length; i++) 
             {
-                result[i].CityName = $"City {i}";
+                result[i].CityName = $"City {id}";
             }
 
             _logger.LogInformation("{name} processing complete", nameof(GetById));

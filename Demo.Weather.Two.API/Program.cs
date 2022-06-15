@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Demo.Weather.Two.API
@@ -52,9 +53,15 @@ namespace Demo.Weather.Two.API
                 // configuration.WriteTo.Console();
                 ConfigureSerilog(hostContext, services, configuration);
             })
-            //.ConfigureLogging(loggingBuilder => {
-            //    loggingBuilder.AddSerilog();
-            //})
+            /*.ConfigureLogging(loggingBuilder => {
+
+                loggingBuilder.AddSerilog();
+                loggingBuilder.AddJsonConsole(options =>
+                {
+                    options.JsonWriterOptions = new JsonWriterOptions()
+                    { Indented = true };
+                });
+            }) */
             .ConfigureWebHostDefaults(webBuilder =>
             {
                 webBuilder.UseStartup(context => new Startup(configuration, logger));
@@ -92,6 +99,7 @@ namespace Demo.Weather.Two.API
             //.WriteTo.Async(wt => wt.Console())
             .WriteTo.Console(outputTemplate: outputTemplate, theme: AnsiConsoleTheme.Code)
             .WriteTo.Debug(new JsonFormatter(renderMessage: true), LogEventLevel.Verbose)
+            .WriteTo.Seq("http://localhost:5341")
             .WriteTo.LogzIoDurableHttp(
                 "https://listener.logz.io:8071?type=dev&token=<TOKEN>",
                 logzioTextFormatterOptions: new LogzioTextFormatterOptions

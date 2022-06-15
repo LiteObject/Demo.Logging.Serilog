@@ -88,8 +88,9 @@ namespace Demo.Weather.One.API
                     //.WriteTo.Async(wt => wt.Console())
                     .WriteTo.Console(outputTemplate: outputTemplate, theme: AnsiConsoleTheme.Code)
                     .WriteTo.Debug(new JsonFormatter(renderMessage: true), LogEventLevel.Verbose)
+                    .WriteTo.Seq("http://localhost:5341")
                     .WriteTo.LogzIoDurableHttp(
-                        "https://listener.logz.io:8071?type=dev&token=IponWRfXqQYPbTQDZOqCQDZwCuaIQjlF",
+                        "https://listener.logz.io:8071?type=dev&token=<TOKEN>",
                         logzioTextFormatterOptions: new LogzioTextFormatterOptions
                         {
                             BoostProperties = true,
